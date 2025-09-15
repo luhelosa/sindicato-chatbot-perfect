@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asesor Sindical Virtual - SUTET-SIMATOL</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      background-color: #f5fdf6;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    header img.logo {
+      width: 100px;
+      margin-right: 15px;
+    }
+    header .title h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header .title h4 {
+      margin: 0;
+      font-weight: 300;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    #chat-box {
+      border: 1px solid #ccc;
+      height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+    .user {
+      color: #006400;
+      font-weight: bold;
+    }
+    .bot {
+      color: #000080;
+      white-space: pre-wrap;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 15px;
+    }
+    button.btn-send {
+      background-color: #006400;
+      color: white;
+    }
+    button.btn-send:hover {
+      background-color: #004d00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="/static/logo-simatol.png" class="logo" alt="Logo SIMATOL">
+    <div class="title">
+      <h1>Asesor Sindical Virtual</h1>
+      <h4>SUTET - SIMATOL</h4>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4">
+          <h2 class="text-center text-success">Bienvenido/a</h2>
+          <p class="lead text-center">Soy <b>Simatolito</b>, tu asesor virtual jurídico-sindical.  
+            Haz tu consulta sobre estatutos, circulares y derechos laborales de los docentes en Colombia.</p>
+          <p class="notice text-center">Estado RAG: {{ estado_rag }}</p>
+
+          <!-- Chat -->
+          <div id="chat-box" aria-live="polite"></div>
+
+          <!-- Input y botón -->
+          <div class="input-group">
+            <input id="pregunta" type="text" class="form-control" placeholder="Escribe tu pregunta..." aria-label="Escribe tu pregunta">
+            <button id="send" class="btn btn-send">Enviar</button>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer-note text-center">
+            Proyecto académico - Inteligencia Artificial Talento Tech
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>
+

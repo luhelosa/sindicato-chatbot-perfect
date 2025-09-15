@@ -1,0 +1,6 @@
+flask
+requests
+ollama
+sentence-transformers
+faiss-cpu
+pypdf
