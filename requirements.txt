@@ -4,3 +4,4 @@ ollama
 sentence-transformers
 faiss-cpu
 pypdf
+gunicorn
